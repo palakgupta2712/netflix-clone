@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { API_KEY, IMG_URL } from "../requests";
+import { API_KEY, IMG_URL } from "../../requests";
+import ButtonGroup from "./ButtonGroup";
 
 function MovieDetails() {
   const { id } = useParams();
@@ -45,6 +46,7 @@ function MovieDetails() {
               <p>&nbsp; {item.name} &nbsp;</p>
             ))}
           </Box>
+          <ButtonGroup />
         </Details>
       </Container>
     </React.Fragment>
@@ -75,7 +77,6 @@ const Background = styled.div`
 
 const Title = styled.h1`
   font-size: 72px;
-  padding: 10px 0px;
 `;
 const SubTitle = styled.h2`
   padding: 20px 0px;

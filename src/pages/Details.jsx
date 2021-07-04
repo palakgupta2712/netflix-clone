@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import MovieDetails from "../components/MovieDetails";
+import MovieDetails from "../components/MovieDetails/MovieDetails";
 
 function Details() {
   return (
