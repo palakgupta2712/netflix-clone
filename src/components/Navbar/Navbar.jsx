@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "./logo.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <React.Fragment>
       <Container>
-        <LogoContainer>
+        <LogoContainer to="/">
           <Logo
             src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
             alt="netflix-logo"
@@ -51,7 +52,7 @@ const MobileLogo = styled.img`
   }
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled(Link)`
   flex-grow: 1;
 `;
 

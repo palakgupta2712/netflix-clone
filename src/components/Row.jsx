@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
 
@@ -17,7 +18,7 @@ function Row({ title, fetchURL }) {
         <Title>{title}</Title>
         <PosterContainer>
           {data.map((item) => (
-            <PosterRow key={item.id}>
+            <PosterRow key={item.id} to={`${item.id}`}>
               <Poster src={`${IMG_URL}${item.poster_path}`} />
               <PosterTitle>{item.name}</PosterTitle>
             </PosterRow>
@@ -76,8 +77,10 @@ const PosterTitle = styled.p`
   padding: 15px;
 `;
 
-const PosterRow = styled.div`
+const PosterRow = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: white;
 `;
