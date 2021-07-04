@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
+import { IMG_URL } from "../requests";
 
 function Row({ title, fetchURL }) {
   const [data, setData] = useState([]);
   const BASE_URL = "https://api.themoviedb.org/3";
-  const IMG_URL = "https://image.tmdb.org/t/p/original";
   useEffect(() => {
     const request = axios
       .get(`${BASE_URL}${fetchURL}`)
