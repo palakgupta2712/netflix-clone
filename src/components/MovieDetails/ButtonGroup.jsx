@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import play from "./play-button.png";
+import { Link } from "react-router-dom";
 
 function ButtonGroup() {
   return (
     <div style={{ display: "flex" }}>
-      <Button>
-        <img src={play} height="12px" />
-        &nbsp; Trailer
-      </Button>
+      <Link to="/trailer">
+        <Button>
+          <img src={play} height="12px" />
+          &nbsp; Trailer
+        </Button>
+      </Link>
+
       <AddButton>+</AddButton>
     </div>
   );

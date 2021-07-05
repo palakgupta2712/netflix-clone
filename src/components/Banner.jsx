@@ -3,6 +3,7 @@ import axios from "axios";
 import requests, { BASE_URL, IMG_URL } from "../requests";
 import styled from "styled-components";
 import play from "./MovieDetails/play-button.png";
+import { Link } from "react-router-dom";
 
 function Banner() {
   const [data, setData] = useState([]);
@@ -10,9 +11,7 @@ function Banner() {
     fetchData();
   }, []);
   async function fetchData() {
-    const result = await axios.get(
-      `${BASE_URL}${requests.fetchNetflixOriginals}`
-    );
+    const result = await axios.get(`${BASE_URL}${requests.fetchActionMovies}`);
     setData(
       result.data.results[
         Math.floor(Math.random() * result.data.results.length)
@@ -34,10 +33,12 @@ function Banner() {
           <Title>{data.name}</Title>
           <Overview>{data.overview}</Overview>
           <ButtonGroup>
-            <TrailerButton>
-              <img src={play} height="12px" />
-              &nbsp; Trailer
-            </TrailerButton>
+            <Link to="/trailer">
+              <TrailerButton>
+                <img src={play} height="12px" />
+                &nbsp; Trailer
+              </TrailerButton>
+            </Link>
             <AddButton>+</AddButton>
           </ButtonGroup>
         </div>

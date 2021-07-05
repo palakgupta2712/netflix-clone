@@ -18,7 +18,7 @@ function Row({ title, fetchURL }) {
         <Title>{title}</Title>
         <PosterContainer>
           {data.map((item) => (
-            <PosterRow key={item.id} to={`${item.id}`}>
+            <PosterRow key={item.id} to={`/title/${item.id}`}>
               <Poster src={`${IMG_URL}${item.poster_path}`} />
               <PosterTitle>{item.name}</PosterTitle>
             </PosterRow>
