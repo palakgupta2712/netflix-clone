@@ -9,9 +9,13 @@ import TrailerButton from "./Buttons/TrailerButton";
 
 function Banner() {
   const [data, setData] = useState([]);
+
   useEffect(() => {
     fetchData();
+    let interval = setInterval(() => fetchData(), 10000);
+    return () => clearInterval(interval);
   }, []);
+
   async function fetchData() {
     const result = await axios.get(`${BASE_URL}${requests.fetchActionMovies}`);
     setData(
@@ -61,8 +65,7 @@ const Overview = styled.div`
 `;
 const Background = styled.div`
   position: relative;
-  img {
-  }
+  transform: ease-in 450ms;
 `;
 
 const BgImage = styled.img`
