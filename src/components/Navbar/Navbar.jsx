@@ -29,10 +29,15 @@ const Container = styled.div`
   background-color: #000000;
   color: white;
   align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
 `;
 
 const Logo = styled.img`
-  margin-left: 30px;
+  margin-left: 25px;
   width: 100px;
   height: 40px;
   cursor: pointer;
