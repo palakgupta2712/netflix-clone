@@ -32,7 +32,7 @@ function Banner() {
             margin: "50px",
           }}
         >
-          <Title>{data.name}</Title>
+          <Title to={`/title/${data.id}`}>{data.name}</Title>
           <Overview>{data.overview}</Overview>
           <ButtonGroup>
             <TrailerButton />
@@ -46,8 +46,11 @@ function Banner() {
 
 export default Banner;
 
-const Title = styled.h1`
+const Title = styled(Link)`
+  font-weight: 700;
   font-size: 60px;
+  text-decoration: none;
+  color: white;
 `;
 
 const Overview = styled.div`

@@ -67,7 +67,6 @@ const Background = styled.div`
   bottom: 0;
   right: 0;
   z-index: -1;
-  opacity: 0.5;
   img {
     width: 100%;
     height: 100%;
@@ -77,6 +76,7 @@ const Background = styled.div`
 
 const Title = styled.h1`
   font-size: 72px;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
 `;
 const SubTitle = styled.h2`
   padding: 20px 0px;
@@ -95,9 +95,9 @@ const Overview = styled.div`
 const Details = styled.div`
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 46%,
-    rgba(70, 64, 70, 0.1) 100%
+    #181818 0%,
+    #181818 50%,
+    rgba(70, 64, 70, 0) 100%
   );
   @media (min-width: 700px) {
     width: 50%;
