@@ -50,12 +50,13 @@ export default Banner;
 
 const Title = styled.h1`
   font-size: 60px;
-  margin: 20px;
 `;
 
 const Overview = styled.div`
   width: 50%;
-  margin: 20px;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 const Background = styled.div`
   position: relative;
@@ -70,7 +71,7 @@ const TrailerButton = styled.button`
   align-items: center;
   background-color: #fff;
   border: none;
-  margin: 24px;
+  margin-right: 16px;
   cursor: pointer;
   &:hover {
     background-color: rgb(198, 198, 198);
@@ -97,6 +98,7 @@ const BgImage = styled.img`
 `;
 
 const ButtonGroup = styled.div`
+  margin: 20px 0px;
   display: flex;
   align-items: center;
 `;
