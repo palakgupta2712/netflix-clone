@@ -51,6 +51,7 @@ const MobileLogo = styled.img`
   margin-left: -15px;
   width: 90px;
   height: 45px;
+  padding: 5px;
   cursor: pointer;
   @media (min-width: 500px) {
     display: none;

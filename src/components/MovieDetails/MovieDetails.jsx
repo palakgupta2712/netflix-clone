@@ -56,12 +56,12 @@ function MovieDetails() {
 export default MovieDetails;
 
 const Container = styled.div`
-  min-height: calc(100vh - 70px);
   position: relative;
 `;
 
 const Background = styled.div`
   position: fixed;
+  margin-top: 50px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -102,6 +102,6 @@ const Details = styled.div`
   @media (min-width: 700px) {
     width: 50%;
   }
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   padding: 60px;
 `;

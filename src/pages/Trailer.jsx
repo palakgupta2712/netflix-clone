@@ -4,8 +4,9 @@ function Trailer() {
   return (
     <div>
       <Navbar />
-      <div style={{ height: "calc(100vh - 60px)" }}>
+      <div style={{ height: "100vh", position: "relative" }}>
         <iframe
+          style={{ marginTop: "50px" }}
           controls="0"
           width="100%"
           height="100%"
