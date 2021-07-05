@@ -4,6 +4,8 @@ import requests, { BASE_URL, IMG_URL } from "../requests";
 import styled from "styled-components";
 import play from "./MovieDetails/play-button.png";
 import { Link } from "react-router-dom";
+import AddButton from "./Buttons/AddButton";
+import TrailerButton from "./Buttons/TrailerButton";
 
 function Banner() {
   const [data, setData] = useState([]);
@@ -33,13 +35,8 @@ function Banner() {
           <Title>{data.name}</Title>
           <Overview>{data.overview}</Overview>
           <ButtonGroup>
-            <Link to="/trailer">
-              <TrailerButton>
-                <img src={play} height="12px" />
-                &nbsp; Trailer
-              </TrailerButton>
-            </Link>
-            <AddButton>+</AddButton>
+            <TrailerButton />
+            <AddButton />
           </ButtonGroup>
         </div>
       </Background>
@@ -63,32 +60,6 @@ const Background = styled.div`
   position: relative;
   img {
   }
-`;
-
-const TrailerButton = styled.button`
-  border-radius: 4px;
-  padding: 10px 12px;
-  font-size: 15px;
-  align-items: center;
-  background-color: #fff;
-  border: none;
-  margin-right: 16px;
-  cursor: pointer;
-  &:hover {
-    background-color: rgb(198, 198, 198);
-  }
-`;
-
-const AddButton = styled.button`
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  margin-right: 16px;
-  color: white;
-  font-size: 28px;
 `;
 
 const BgImage = styled.img`
