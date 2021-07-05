@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "./logo.png";
+import logo from "../../assests/logo.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -15,7 +15,10 @@ function Navbar() {
           <MobileLogo src={logo} alt="netflix-mobile-logo" />
         </LogoContainer>
         <Text>UNLIMITED TV SHOWS & MOVIES</Text>
-        <JoinNowButton>JOIN NOW</JoinNowButton>
+        <Link to="/join">
+          <JoinNowButton>JOIN NOW</JoinNowButton>
+        </Link>
+
         <SignInButton>SIGN IN</SignInButton>
       </Container>
     </React.Fragment>
