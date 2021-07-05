@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import MainContent from "../components/MainContent";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <Navbar />
       <Banner />
       <MainContent />
+      <Footer />
     </React.Fragment>
   );
 }
